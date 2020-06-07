@@ -1,0 +1,66 @@
+body {
+  font-size: 25px;
+  background-color: #69ca25;
+}
+header {
+  border-bottom: 1px solid #ccc;
+  text-align: center;
+}
+main {
+  border-bottom: 1px solid #ccc;
+  position: relative;
+}
+footer {
+  border-bottom: 1px solid #ccc;
+  text-align: center;
+}
+p {
+  margin: 0;
+  color: white;
+}
+.kotae {
+  margin-left: 300px;
+}
+ul {
+  padding: 0;
+  border-top: 1px solid #000000;
+  display: table; /* 定義 */
+  table-layout: fixed;
+  width: 15%;
+}
+li {
+  list-style-type: none;
+  background-color: #69ca25;
+  display: list-item; /* 定義 */
+  cursor: pointer;
+  color: #fff;
+  box-shadow: -8px -9px 20px 0px rgb(0, 0, 0) inset;
+  text-align: center;
+}
+
+li:hover {
+  background: #0300cc;
+  color: #fff;
+}
+
+textarea {
+  width: 340px;
+  height: 94px;
+  font-size: 100%;
+  box-shadow: 3px 3px 3px 3px #555;
+}
+
+.mondai_area {
+  display: flex;
+}
+
+input {
+  width: 340px;
+  height: 10px;
+  margin-left: 500px;
+}
+
+h1 {
+  color: white;
+  text-shadow: #000000;
+}
