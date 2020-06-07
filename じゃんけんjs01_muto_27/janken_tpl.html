@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <script src="js/jquery-2.1.3.min.js"></script>
+    <link rel="stylesheet" href="css/sample.css" />
+    <title>じゃんけん</title>
+  </head>
+
+  <body>
+    <header>
+      <h1>じゃんけん</h1>
+    </header>
+
+    <main>
+      <div>あなた</div>
+      <div id="user_hands"></div>
+      <ul>
+        <li id="gu">グー</li>
+        <li id="cho">チョキ</li>
+        <li id="par">パー</li>
+      </ul>
+      <div>コンピュータ「<span id="pc_hands">なに？</span>」</div>
+      <div id="judgment">勝ち</div>
+    </main>
+
+    <footer></footer>
+    <script>
+      // グー
+      $("#gu").on("click", function () {
+        view = '<img src="img/gu.jpg" width="121" height="121">';
+        $("#user_hands").html(view);
+
+        // 乱数
+        const r = Math.ceil(Math.random() * 3);
+        // 分岐
+        if (r == 1) {
+          $("#pc_hands").html(
+            '<img src="img/gu.jpg" width="121" height="121">'
+          );
+          $("#judgment").html("あいこ");
+        }
+        if (r == 2) {
+          $("#pc_hands").html(
+            '<img src="img/choki.jpg" width="121" height="121">'
+          );
+          $("#judgment").html('<img src="img/win.jpg">');
+        }
+        if (r == 3) {
+          $("#pc_hands").html(
+            '<img src="img/par.jpg" width="121" height="121">'
+          );
+          $("#judgment").html('<img src="img/loss.jpg">');
+        }
+      });
+
+      // チョキ
+      $("#cho").on("click", function () {
+        view = '<img src="img/choki.jpg" width="121" height="121">';
+        $("#user_hands").html(view);
+        // 乱数
+        const r = Math.ceil(Math.random() * 3);
+        // 分岐
+        if (r == 1) {
+          $("#pc_hands").html(
+            '<img src="img/gu.jpg" width="121" height="121">'
+          );
+          $("#judgment").html('<img src="img/loss.jpg">');
+        }
+        if (r == 2) {
+          $("#pc_hands").html(
+            '<img src="img/choki.jpg" width="121" height="121">'
+          );
+          $("#judgment").html("あいこ");
+        }
+        if (r == 3) {
+          $("#pc_hands").html(
+            '<img src="img/par.jpg" width="121" height="121">'
+          );
+          $("#judgment").html('<img src="img/win.jpg">');
+        }
+      });
+
+      // パー
+      $("#par").on("click", function () {
+        view = '<img src="img/par.jpg" width="121" height="121">';
+        $("#user_hands").html(view);
+        // 乱数
+        const r = Math.ceil(Math.random() * 3);
+        // 分岐
+        if (r == 1) {
+          $("#pc_hands").html(
+            '<img src="img/gu.jpg" width="121" height="121">'
+          );
+          $("#judgment").html('<img src="img/win.jpg">');
+        }
+        if (r == 2) {
+          $("#pc_hands").html(
+            '<img src="img/choki.jpg" width="121" height="121">'
+          );
+          $("#judgment").html('<img src="img/loss.jpg">');
+        }
+        if (r == 3) {
+          $("#pc_hands").html(
+            '<img src="img/par.jpg" width="121" height="121">'
+          );
+          $("#judgment").html("あいこ");
+        }
+      });
+    </script>
+  </body>
+</html>
