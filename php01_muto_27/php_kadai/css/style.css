@@ -1,0 +1,107 @@
+/* 全体 */
+/* * {
+  box-sizing: border-box;
+} */
+
+/* この下から記述 */
+/*タイトル*/
+body {
+  background: radial-gradient(rgb(75, 75, 75), black);
+}
+
+.title {
+  text-align: center;
+  margin-top: 10px;
+  font-size: 50px;
+  position: relative;
+  color: #f96e6e;
+  line-height: 1.4;
+  -webkit-box-reflect: below -10px -webkit-linear-gradient(
+      top,
+      rgba(0, 0, 0, 0),
+      rgba(0, 0, 0, 0) 10%,
+      rgba(0, 0, 0, 0.6)
+    );
+}
+.PLAYERNAME_CP {
+  display: flex; /*自分の手とコンピューターの手を横並びに*/
+  width: 1200px; /*1200pxの間で横並びにして中央に*/
+  margin: auto;
+  margin-top: 150px;
+  color: #6eb0f9;
+}
+
+.PLAYERNAME,
+.CP {
+  width: 600px;
+  font-size: 40px;
+}
+
+.CP p {
+  float: right;
+}
+
+/* 手の選択肢 */
+.player {
+  margin-top: 50px;
+  text-align: center;
+  padding-right: 500px;
+  font-size: 30px;
+  color: #6eb0f9;
+}
+
+.your_hands {
+  display: flex;
+}
+
+.btn_gu, /* 手のボタン */
+.btn_choki,
+.btn_par {
+  width: 121px;
+  height: 121px;
+  text-indent: -15em;
+}
+.te {
+  text-align: center;
+}
+
+/*　プレイヤーVSコンピューター画面 */
+.my_hands_vs_PC_hands {
+  display: flex; /*自分の手とコンピューターの手を横並びに*/
+  width: 1200px; /*1200pxの間で横並びにして中央に*/
+  margin: auto;
+  margin-top: 150px;
+}
+
+/*プレイヤーのグー*/
+.my_gu,
+.my_par,
+.my_choki,
+.gu,
+.choki,
+.par {
+  width: 600px;
+  transform: rotate(360deg);
+  transition: 1s;
+  display: none;
+}
+
+.my_gu img,
+.my_par img,
+.my_choki img {
+  float: left;
+  width: 250px;
+}
+
+.gu img,
+.choki img,
+.par img {
+  float: right;
+  width: 250px;
+}
+
+.PC {
+  font-size: 50px;
+  color: #6eb0f9;
+  display: none;
+}
