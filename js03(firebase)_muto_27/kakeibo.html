@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="utf-8" />
+    <title>家計簿アプリ</title>
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+
+  <body>
+    <!-- ブラウザの画面に見える内容 -->
+
+    <!-- 日付 -->
+    <div class="nyuryokuarea">
+      <div class="hiduke">
+        <select name="" id="year"> </select>
+        <select name="" id="month"> </select>
+        <select name="" id="day"> </select>
+      </div>
+
+      <!-- 勘定科目選択肢 -->
+      <select name="kanjo" id="kanjo">
+        <option value="前月繰越">前月繰越</option>
+        <option value="給与">給与</option>
+        <option value="賞与">賞与</option>
+        <option value="雑益">雑益</option>
+        <option value="食費">食費</option>
+        <option value="水道光熱費">水道光熱費</option>
+        <option value="通信費">通信費</option>
+        <option value="趣味・娯楽費">趣味・娯楽費</option>
+        <option value="交通費">交通費</option>
+        <option value="美容費">美容費</option>
+        <option value="医療費">医療費</option>
+        <option value="被服費">被服費</option>
+        <option value="生活雑貨・日用品">生活雑貨・日用品</option>
+        <option value="教育費">教育費</option>
+        <option value="交際費">交際費</option>
+        <option value="住宅費">住宅費</option>
+        <option value="ペット">ペット</option>
+        <option value="自動車関連">自動車関連</option>
+        <option value="社会保険">社会保険</option>
+        <option value="税金">税金</option>
+        <option value="雑費">雑費</option>
+      </select>
+      <div id="null"></div>
+      <div class="utiwake">
+        <input type="text" name="" id="utiwake" />
+      </div>
+      <div class="kingaku">
+        <input type="number" name="" id="kingaku" />
+      </div>
+      <div>
+        <button class="btn">入力</button>
+      </div>
+      <div>
+        <button class="btn_a">合計を表示</button>
+      </div>
+
+      <div class="nengetsu">
+        <select name="" id="year_"> </select>
+        <select name="" id="month_"> </select>
+      </div>
+      <div>
+        <button class="btn_b">表示!</button>
+      </div>
+      <!-- <div class="calendar-title">
+        <div class="btn-prev">＜</div>
+        <div id="year_">２０１９</div>
+        <div id="month_">１</div>
+        <div class="btn-next">＞</div>
+      </div> -->
+    </div>
+    <!-- テーブル -->
+    <div>
+      <table id="output">
+        <tr>
+          <th cmanFilterBtn class="title">
+            日付
+          </th>
+          <th class="title">
+            勘定科目
+          </th>
+          <!-- <th class="title">
+            勘定科目２
+          </th> -->
+          <th class="title">
+            内訳
+          </th>
+          <th class="title">
+            収益
+          </th>
+          <th class="title">
+            支出
+          </th>
+        </tr>
+      </table>
+
+      <table>
+        <tr>
+          <td class="gokei">合計</td>
+
+          <td class="total">0</td>
+          <!--収益合計-->
+
+          <td class="totalB">0</td>
+          <!--費用合計-->
+        </tr>
+        <tr>
+          <td class="rieki">利益(収益―支出)</td>
+          <td class="riekiA" colspan="2">0</td>
+        </tr>
+      </table>
+    </div>
+
+    <!-- JQuery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+    <!-- The core Firebase JS SDK is always required and must be listed first -->
+    <script src="https://www.gstatic.com/firebasejs/7.14.2/firebase.js"></script>
+
+    <!-- TODO: Add SDKs for Firebase products that you want to use
+     https://firebase.google.com/docs/web/setup#available-libraries -->
+
+    <script>
+      // Your web app's Firebase configuration
+      var firebaseConfig = {
+        apiKey: "AIzaSyAYjVWphuB8X-3s7K9tdbBXzz3tgbSevtI",
+        authDomain: "okozukaityo-f2ab4.firebaseapp.com",
+        databaseURL: "https://okozukaityo-f2ab4.firebaseio.com",
+        projectId: "okozukaityo-f2ab4",
+        storageBucket: "okozukaityo-f2ab4.appspot.com",
+        messagingSenderId: "102780740104",
+        appId: "1:102780740104:web:dc61ed290cc2f14cdea7bd",
+      };
+      // Initialize Firebase
+      firebase.initializeApp(firebaseConfig);
+
+      const newPostRef = firebase.database().ref();
+    </script>
+
+    <script src="js/kakeibo.js"></script>
+  </body>
+</html>

@@ -1,0 +1,118 @@
+body {
+  background-color: #fff;
+  /* height: 9000px; */
+  position: relative;
+}
+
+/* 入力欄 */
+#utiwake {
+  height: 26px;
+  margin-top: 35px;
+  font-size: 25px;
+  box-shadow: 0 5px 5px rgb(7, 39, 87);
+}
+#kingaku {
+  height: 26px;
+  margin-top: 35px;
+  font-size: 25px;
+  box-shadow: 0 5px 5px rgb(7, 39, 87);
+}
+
+.nyuryokuarea {
+  display: flex;
+  position: sticky;
+  top: 0px;
+  background-color: rgba(175, 248, 224, 0.527);
+  height: 100px;
+  box-shadow: 0 5px 30px rgb(7, 39, 87);
+}
+
+select {
+  height: 32px;
+  margin-top: 35px;
+  font-size: 25px;
+  box-shadow: 0 5px 5px rgb(7, 39, 87);
+}
+.btn,
+.btn_a,
+.btn_b,
+.btn_c {
+  height: 32px;
+  margin-top: 35px;
+  background: linear-gradient(rgb(94, 118, 255), rgb(103, 202, 248));
+  color: #fff;
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 5px;
+  border-radius: 5px;
+  font-size: 15px;
+  box-shadow: 0 5px 5px rgb(7, 39, 87);
+}
+
+.hiduke {
+  margin-left: 100px;
+}
+
+.calendar-titl {
+  display: flex;
+}
+
+/* 年月選択 */
+.nengetsu {
+  margin-left: 100px;
+}
+#year_,
+#month_ {
+  background: rgba(21, 24, 209, 0.849);
+  font-size: 25px;
+  color: rgb(255, 255, 255);
+}
+
+/* テーブル*/
+table {
+  border: double 3px rgb(0, 102, 255);
+  border-collapse: collapse;
+  margin: auto;
+  font-size: 25px;
+}
+table td {
+  border: solid 1px black;
+  height: 28px;
+  width: 150px;
+}
+
+table th {
+  width: 150px;
+  background: linear-gradient(#11c7ff, #1d57d6);
+  color: #fff;
+}
+
+.title {
+  border: double 3px black;
+}
+
+.gokei {
+  width: 405px;
+  text-align: center;
+}
+.rieki {
+  text-align: center;
+}
+
+.total {
+  text-align: right;
+}
+.totalB {
+  text-align: right;
+}
+
+.riekiA {
+  text-align: right;
+}
+
+.sakujobtn {
+  width: 50px;
+}
+
+.calendar-title {
+  display: flex;
+}
